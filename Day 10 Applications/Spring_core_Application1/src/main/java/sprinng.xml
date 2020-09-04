@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- Welcome Class Dependency Injection -->
+	<bean id="welcome" class="com.manipal.spring_core_demo.Welcome" ><!-- It should be package name.dotclassname -->
+		<property name="message"
+			value="Welcome to Spring using Setter Method" />
+	</bean>
+
+	<bean id="welcome1" class="com.manipal.spring_core_demo.Welcome"  >
+		<constructor-arg name="message"
+			value="Welcome to Spring using Constructor">
+		</constructor-arg>
+		
+	<!-- Note:Since we are using constructor-arg , it means it will look for Parameterized Constructor.
+	But if we declare a Parameterized Constructor, then we need to invoke a default constructor explicitly.-->
+		
+	</bean>
+
+	<!-- Employee Class Dependency Injection -->
+	<bean id="employee" class="com.manipal.spring_core_demo.Employee">
+		<constructor-arg name="empId" value="1212"></constructor-arg>
+		<constructor-arg name="empName" value=" GauravChauhan"></constructor-arg>
+		<constructor-arg name="salary" value="60000"></constructor-arg>
+	</bean>
+
+
+
+</beans>
