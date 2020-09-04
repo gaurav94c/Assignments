@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean id="triangle1"
+		class="com.manipal.spring_core_demos.Triangle">
+		<property name="p1" ref="pl3"></property>
+		<property name="p2" ref="pl4"></property>
+		<property name="p3" ref="pl5"></property>
+
+	</bean>
+	<bean id="line1" class="com.manipal.spring_core_demos.Line">
+		<property name="p1" ref="pl1"></property>
+		<property name="p2" ref="pl2"></property>
+	</bean>
+
+	<bean id="pl1" class="com.manipal.spring_core_demos.Point">
+		<property name="xCordinate" value="100"></property>
+		<property name="yCordinate" value="200"></property>
+	</bean>
+	<bean id="pl2" class="com.manipal.spring_core_demos.Point">
+		<property name="xCordinate" value="50"></property>
+		<property name="yCordinate" value="75"></property>
+	</bean>
+	<bean id="pl3" class="com.manipal.spring_core_demos.Point">
+		<property name="xCordinate" value="25"></property>
+		<property name="yCordinate" value="43"></property>
+	</bean>
+	<bean id="pl4" class="com.manipal.spring_core_demos.Point">
+		<property name="xCordinate" value="84"></property>
+		<property name="yCordinate" value="96"></property>
+	</bean>
+	<bean id="pl5" class="com.manipal.spring_core_demos.Point">
+		<property name="xCordinate" value="54"></property>
+		<property name="yCordinate" value="99"></property>
+	</bean>
+
+</beans>
