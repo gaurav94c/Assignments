@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+           
+  	<!--  For 2 different Classes , we need 2 different Beans -->
+  	
+	<bean id="employee" class="com.manipal.spring_core_demo2.model.Employee">
+		<property name="empId" value="7893"/>
+		<property name="empName" value="Gaurav"/>
+		<property name="salary" value="89000"/>
+		<property name="address" ref="address_id" />
+	</bean>
+
+	<bean id="address_id" class="com.manipal.spring_core_demo2.model.Address">
+		<property name="streetNo" value="32"/>
+		<property name="city" value="Bengaluru"/>
+		<property name="pin" value="560001"/>
+	</bean>
+           
+</beans>
+
