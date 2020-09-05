@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/context  
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+    
+	<context:annotation-config/>
+	<!--  Also prompt you to put spring context also  -->
+	
+	<bean id="employee"
+		class="com.manipal.spring_core_demo3.model.Employee">
+		<constructor-arg name="empId" value="10001" />
+		<constructor-arg name="empName" value="Gaurav" />
+		<constructor-arg name="salary" value="89000" />		
+		<constructor-arg name="address" ref="address1"/>
+	</bean>
+
+	<bean id="address1" class="com.manipal.spring_core_demo3.model.Address">
+				<property name="streetNo" value="245" />
+				<property name="city" value="Bengaluru" />
+				<property name="pin" value="560001" />
+				
+			</bean>
+
+	 <bean id="address2" class="com.manipal.spring_core_demo3.model.Address">
+				<property name="streetNo" value="3333" />
+				<property name="city" value="Delhi" />
+				<property name="pin" value="680001" />
+			</bean>
+ 
+</beans>
+
